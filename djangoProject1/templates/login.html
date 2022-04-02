@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+	<title>Login Page </title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	
+	<img class="wave" src="{% static 'img/wave.png' %}">
+	<div class="container">
+		<div class="img">
+			<img src="{% static 'img/bg.svg' %}">
+		</div>
+		<div class="login-content">
+			<form action="" method='POST'>{% csrf_token %}
+				<img src="{% static 'img/girl.jpg' %}">
+				<h2 class="title">Welcome</h2>
+                <h4 class ="subtittle">{{ error4 }}</h4>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fa fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Email</h5>
+           		   		<input type="email" name='username' class="input" required>
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fa fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password"  name="u_password" class="input" required>
+            	   </div>
+            	</div>
+            	<a href="">Forgot Password ?</a>
+            	<input type="submit" class="btn" value="Login">
+				<a href="{% url 'user_signup' %}" style="text-align: center;">Create an account</a>
+				<br>
+				<b><a href='/'  style="text-align: center;">Back To Home?</b>
+		    </form>
+        </div>
+		
+    </div>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Here to login !! </p>
+{{ error4 }}
+<form action="" method="post">{% csrf_token %}
+    <div class="form-row">
+    <input name="username" type="email"> Email
+        </div>
+    <br>
+    <br>
+    <div>
+    <input name="u_password" type="password">password
+        </div>
+    <button type="submit">Proceed to login </button>
+    <br>
+    <p>You bitch create a account here !</p>
+    <a href="{% url 'user_signup' %}">Signup </a>
+</form>
+
+</body>
+</html> {% endcomment %}

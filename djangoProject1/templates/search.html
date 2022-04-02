@@ -1,0 +1,78 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+{% if search_results|length < 1 %}
+ <br>{% if messages %}
+
+
+{% endif %}
+<br>
+<br>
+<br>
+     <p>Your search  <b>{{ query }} </b>    Does not match with any Results , try other keywords!</p>
+    <ul>
+      <li>
+          Try Diffrent Keywords :
+      </li>
+    <li>
+         <p>Executer more relavent query (eg:candels,indoreplants) </p>
+    </li>
+    </ul>
+    <br>
+    <br>
+    <br>
+ {% else %}
+
+<br>
+{% for items in search_results %}
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+              <img src="{{ items.image1.url }}" alt="plants/ home decore " class="img-fluid im">
+              <div class="p-3 ">
+                <h2 class="text-center">{{ items.name }}</h2>
+                <br>
+                <h5>Discount:<b>{{ items.off_price }}</b></h5>&nbsp<h6>orignal price:{{items.max_price}}</h6>
+              </div>
+              <div class="card-footer mx-auto">
+                <a href="{% url 'PRODUCTR:detailprod_page' pk=items.custom_id %}" class="btn btn-outline-success ">View Details <i class="fa fa-arrow-right"
+                  aria-hidden="true"></i></a>
+                <br><br>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+{% comment %} 
+
+ <table>
+ <div class="form-row">
+     <br>
+ <h3>product_name :</h3><b>{{ items.name }}</b>
+     <br>
+     <br>
+     Type:{{ items.plant_type }}
+     <br>
+ <img src="{{ items.image1.url }}" height="200" width="200">
+
+     <br>
+     <br>
+
+     <h5>Description:</h5>{{ items.description|truncatewords:100}}
+     <br>
+     <br>
+     actual_price:{{ items.max_price }}
+     <br>
+     offer_price :<b>{{ items.off_price }}</b>
+     <br>
+     <button ><a href="{% url 'PRODUCTR:detailprod_page' pk=items.custom_id %}" type="button">View Details</a> </button>
+ <br>
+ </div> {% endcomment %}
+
+{% comment %}  {% endcomment %}
+
+
+
+
+
+{% endif %}
+{% endblock %}

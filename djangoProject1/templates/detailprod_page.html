@@ -1,0 +1,313 @@
+{% extends  'index.html' %}
+{% load static %}
+
+{% block content %}
+
+{%for k in item %}
+
+
+<section class="pro-details">
+    <div class="container" >
+        <div class="row">
+         <div class="col-md-6 col-12 mx-auto mb-3">
+           <img src="{{k.image1.url}}" alt="" class="img-fluid det-img">
+                   </div>
+         <div class="col-md-6 col-12 mx-auto mb-3">
+            <div class="row">
+              <div class="col-12">
+                <h2>{{k.name}}</h2>
+                Max Price : <del><span class="price-box">{{k.max_price}}</span></del> <br>
+                Off Price : <span class="price-box">{{k.off_price}}</span> <br>
+                Quantity:&nbsp; <button class="btn btn-outline-dark">{{k.quantity}}</button>
+                <br>Lighting Type:&nbsp;  {{light_type_for_plants_or_candels}}
+                <hr>
+                <p> {{k.description}}</p>
+                <br>
+                Height :&nbsp; {{k.height}} cm   <br>  Width :&nbsp; {{k.width}} cm
+                <br>
+
+              </div>
+            </div>
+           
+            <div class="row pl-2">
+
+                          {% comment %} <form action="{% url 'PRODUCTR:buy_now' %}" method="POST">{% csrf_token %} {% endcomment %}
+             <form action="{% url "PRODUCTR:add_to_cart" %}" method="POST">{% csrf_token %} 
+            <div>
+                <input type="hidden" name="prod_custom_id_cart" value={{k.custom_id}} >
+                 <button type="submit" class="btn btn-outline-success pa  m-2" id="prod_custom_id_cart">Cart</button>
+             </div>
+            </form>
+             
+           <form action="{% url 'PRODUCTR:buy_now' %}" method="POST">{% csrf_token %}
+            <div>
+            <input type="hidden" name="prod_custom_id" value={{k.custom_id}}>
+           <button type="submit" class="btn btn-outline-success pa  m-2" id="prod_custom_id">Buy NOW </button>
+         </div>
+           </div>
+         </div></form>
+
+        </div>
+   </div>
+       <br><br><br>
+{% endfor %}
+       <div class="container">
+         <div class="row p-3">
+           <h3>Description</h3>
+           <p>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sunt dicta sed iure cupiditate vero 
+             aliquam aut eos tempora nisi nostrum pariatur ducimus, dignissimos veniam quos necessitatibus inventore 
+             mollitia est?
+           </p>
+         </div>
+         <br>
+         <div class="row p-3">
+          <h3>Features</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sunt dicta sed iure cupiditate vero 
+            aliquam aut eos tempora nisi nostrum pariatur ducimus, dignissimos veniam quos necessitatibus inventore 
+            mollitia est?
+          </p>
+        </div>
+        <br>
+        <div class="row p-3">
+          <h3>Faqs</h3> <br>
+          <div class="col-md-10 mx-auto"> 
+            <div class="panel-group margin_0" id="accordion1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse1">
+                                <i class="rt-icon2-bubble highlight"></i>
+                                01) How do I get more likes?
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div style="height: 0px;" id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body  p-3">
+                            Completed profile will generate more attention, so go ahead and add more photos of yourself (the more flattering the better).
+                            You can add up to a total of 6 photos, so don’t be afraid to show everyone how beautiful you are. Tip: try some without filters.
+                            If you’re not seeing anyone you're interested in, you can try widening your search radius in the setting. By increasing this , you may find someone you like just outside your comfort zone.
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion1" href="#collapse2" class="collapsed">
+                                <i class="rt-icon2-bubble highlight"></i>
+                                02) How to use mPerfecto Swipe & Match ?
+                            </a>
+                        </h4>
+                    </div>
+                    <div style="height: 0px;" id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body  p-3">
+                            mPerfecto will suggest people nearby. You can adjust this distance in your search setting. Once a profile is presented to you, you have two options.
+                           <h4> Swipe right like</h4>
+                            If you like what you see, swipe right. They won’t know you liked them unless they like you back.  mPerfecto is completely anonymous and rejection -free
+                           <h4> Swipe left to pass</h4>
+                            Swiping left means you’re not interested in that person. They won’t be shown to you again, and won’t know that you swiped on them either.
+                          <h4>  You’ve got a match!</h4>
+                            Someone you liked has liked you back congratulations, you’ve got a match!
+                            Now you can start chatting. Good luck!
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion1" href="#collapse3" class="collapsed">
+                                <i class="rt-icon2-bubble highlight"></i>
+                                03) I can’t seem to get any matches. Help!
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div style="height: 0px;" id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Sorry to hear that. Here are some tips you can try out: <br>
+                            1-Have you been swiping right? To increase your odds, the more people you like, the larger the possibility that someone will like you back. Try adjusting your preferences and step up your swiping game.
+                            <br>
+                            2- your account may still be under review. This means that you won’t see any new profiles until your account has been validated by our review team.
+                            <br>
+                            To avoid running into these issues, please make sure to use authentic photos and respect our community guidelines. 
+                            <br>
+                            If your account is under review, a badge will be shown under our help center homepage. Please contact us for future questions if you see this.
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+               
+                
+            </div> 
+        </div>
+        </div>
+        </div>
+
+
+
+      
+</section>
+{% comment %} {% endfor %}  {% endcomment %}
+
+<style>
+  .panel{
+    padding: 15px;
+    box-shadow: 0 2px 25px 0 rgba(110,130,218,0.18);
+}
+
+.panel-default > .panel-heading {
+  background-color: transparent;
+  border: medium none;
+  border-radius: 0;
+  color: inherit;
+  padding: 0;
+  position: relative;
+}    
+.panel-heading .panel-title > a {
+  background-color:#0d8c68;
+  border: medium none;
+  color: #fff;
+  display: block;
+  font-family: Arial,Helvetica,sans-serif;
+  line-height: 28px;
+  padding: 11px 65px 11px 40px;
+  word-wrap: break-word;
+}
+    
+.panel-heading .panel-title > a::after {
+  bottom: 0;
+  content: "▲";
+  font-family: "Roboto",sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 48px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 60px;
+}  
+.panel-heading .panel-title > a.collapsed::after {
+  content: "▼";
+}    
+.panel-body{
+  height:auto;
+  
+}
+.panel-title a{
+    text-decoration: none;
+}
+
+</style>
+{% comment %} {% endcomment %}
+
+{#both section will different but in same page #}
+{% comment %} 
+for candels and other stuffs  {% endcomment %}
+{% comment %} {% for can in item_c %}
+so , it's the start of the candels section 
+ <br>
+ {{can.custom_id_c}}
+ <br><br>
+ {{ can.name_c }}<br><br>
+ {{ can.description_c }}<br><br>
+ <img src='{{can.image_c1.url }}'height='200' width='200'> <br>
+ {% if can.image_c2 %}
+ <img src={{ can.image_c2.url}} height='200' width='200' ><br>
+ {% else %}
+ {% endif %}
+ {{can.color}}<br>
+ {{can.length}}<br>
+ {{can.material}}  <br>
+    <br>
+    <form action="/prod/add_to_cart/" method="post">{% csrf_token %}
+ <div>
+ <input type="hidden" name="prod_custom_id" value="{{can.custom_id_c}}">
+     <button type="submit" id="prod_custom_id"></button>
+ </div>
+</form>
+<br>
+hey hey 
+<form action='prod/buy_now' name="buy_now" method='POST'>
+  <div>
+ <input type="hidden" name="buy_now_id" value="{{can.custom_id_c}}">
+     <button type="submit" id="prod_custom_id">Buy NOW !!! </button>
+ </div>
+
+</form>
+{%endfor%} {% endcomment %}
+
+
+{% endblock %} 
+
+
+<script>
+  
+  $(".top-product .owl-carousel").owlCarousel({
+
+loop: true,
+nav: false,
+dots: false,
+autoplay: true,
+
+responsive: {
+  0: {
+    items: 2,
+
+  },
+  600: {
+    items: 3,
+
+  },
+  800: {
+    items: 5,
+  }
+
+
+}
+});
+</script>
+
+ 
+
+
+
+
+
+  <script>
+    $(document).ready(function () {
+      $("#cross").css("display", "none");
+      $("#bar").click(function () {
+        $("#bar").css("display", "none");
+        $("#cross").css("display", "block");
+
+      });
+      $("#cross").click(function () {
+        $("#cross").css("display", "none");
+        $("#bar").css("display", "block");
+
+      });
+
+    });
+
+    $(window).on('scroll', () => {
+      if ($(document).scrollTop() > 70) {
+        $('  .navvv').addClass('fixed-top animated fadeInDown ');
+      }
+      else {
+        $('  .navvv').removeClass('fixed-top animated fadeInDown ');
+
+      }
+
+
+    });
+  </script>
+
+
+

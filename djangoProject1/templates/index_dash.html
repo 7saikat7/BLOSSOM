@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" >
+    <meta name="author" >
+    <meta name="keywords" >
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="{% static 'dashboard/css/font-face.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'dashboard/vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'dashboard/vendor/font-awesome-5/css/fontawesome-all.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'dashboard/vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="{% static 'dashboard/vendor/bootstrap-4.1/bootstrap.min.css' %}" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="{% static 'dashboard/vendor/animsition/animsition.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'dashboard/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'dashboard/vendor/wow/animate.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'dashboard/vendor/css-hamburgers/hamburgers.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'dashboard/vendor/slick/slick.css'%}" rel="stylesheet" media="all">
+    <link href="{% static 'dashboard/vendor/select2/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'dashboard/vendor/perfect-scrollbar/perfect-scrollbar.css' %}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{% static 'dashboard/css/theme.css' %}" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="{% static 'dashboard/images/icon/logo-blue.png' %}" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="{% url 'PRODUCTR:dashboard' %}">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            
+                        </li>
+                        <li>
+                            <a href="{%url 'add_address'%}">
+                                <i class="fas fa-user"></i>Address</a>
+                        </li>
+                        {% comment %} <li>
+                            <a href="track-order.html">
+                                <i class="fas fa-truck"></i>Track Order</a>
+                        </li> {% endcomment %}
+                        <li>
+                            <a href="change-password.html">
+                                <i class="fas fa-edit"></i>Change Password</a>
+                        </li>
+                        <li>
+                            <a href="logout.html">
+                                <i class="zmdi zmdi-power"></i>LogOut</a>
+                        </li>
+                       
+                        
+                      
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img src="{% static 'dashboard/images/icon/logo-blue.png' %}" alt="Cool Admin" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="{% url 'PRODUCTR:dashboard' %}">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            
+                        </li>
+                        <li>
+                            <a href="{%url 'add_address'%}">
+                                <i class="fas fa-user"></i>Address</a>
+                        </li>
+                        {% comment %} <li>
+                            <a href="track-order.html">
+                                <i class="fas fa-truck"></i>Track Order</a>
+                        </li> {% endcomment %}
+                        <li>
+                            <a href="change-password.html">
+                                <i class="fas fa-edit"></i>Change Password</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'user_logout' %}">
+                                <i class="zmdi zmdi-power"></i>Logout</a>
+                        </li>
+                       
+                        
+                       
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                           <a href="/" class="btn btn-outline-success">Back to Website</a>
+                            <div class="header-button">
+                                <div class="noti__item js-item-menuu">
+                                    <!-- <i class="zmdi zmdi-account"></i> -->
+                                   
+                                    <a href="track-order.html">
+                                        <i class="fa  fa-truck" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="noti__item js-item-menuu">
+                                    <a href="{% url 'PRODUCTR:view_cart' %}">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </div>
+                                <div class="account-wrap">
+
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="{% static 'dashboard/images/myimg/avatar.svg' %}" alt="John Doe" />
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">{{user.first_name}}</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="{% static 'dashboard/images/myimg/avatar.svg' %}" alt="John Doe" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">{{user.first_name}}</a>
+                                                    </h5>
+                                                    <span class="email">{{user.username}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="{%url 'add_address'%}">
+                                                        <i class="zmdi zmdi-account"></i>Address</a>
+                                                </div>
+                                               
+                                                {% comment %} <div class="account-dropdown__item">
+                                                    <a href="track-order.html">
+                                                         <i class="fa  fa-truck" aria-hidden="true"></i>Track Order</a>
+                                                </div> {% endcomment %}
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="{% url 'user_logout' %}">
+                                               <i class="zmdi zmdi-power"></i>Logout</a>
+                                          </div>
+                                    </div>
+                               </div>
+                           </div>
+                      </div>
+                  </div>
+              </div>
+         </div>
+ </header>
+           
+{% block content%}
+
+{% endblock %}
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'dashboard/vendor/jquery-3.2.1.min.js' %}"></script>
+    <!-- Bootstrap JS-->
+    <script src="{% static 'dashboard/vendor/bootstrap-4.1/popper.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendor/bootstrap-4.1/bootstrap.min.js' %}"></script>
+    <!-- Vendor JS       -->
+    <script src="{% static 'dashboard/vendor/slick/slick.min.js' %}">
+    </script>
+    <script src="{% static 'dashboard/vendor/wow/wow.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendor/animsition/animsition.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js' %}">
+    </script>
+    <script src="{% static 'dashboard/vendor/counter-up/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendor/counter-up/jquery.counterup.min.js' %}">
+    </script>
+    <script src="{% static 'dashboard/vendor/circle-progress/circle-progress.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendor/perfect-scrollbar/perfect-scrollbar.js' %}"></script>
+    <script src="{% static 'dashboard/vendor/chartjs/Chart.bundle.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendor/select2/select2.min.js' %}">
+    </script>
+
+    <!-- Main JS-->
+    <script src="{% static 'dashboard/js/main.js' %}"></script>
+
+</body>
+
+</html>

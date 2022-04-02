@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+<br>
+{% block content%}
+{% for items in p %}
+ <table>
+ <div class="form-row">
+     <br><br>
+     <br>
+     product_name :<b>{{ items.name }}</b>
+     <br>
+     Type:{{ items.plant_type }}
+     <br>
+ <img src="{{ items.image1.url }}" height="200" width="200">
+
+     <br>
+     {{ items.description|truncatewords:100}}
+     <br>
+     <br>
+     actual_price:{{ items.max_price }}
+     <br>
+     offer_price :<b>{{ items.off_price }}</b>
+     <br>
+     <button ><a href="{% url 'PRODUCTR:detailprod_page' pk=items.custom_id %}" type="button">View Details</a> </button>
+ <br>
+ </div>
+#################     *****     ##################
+{%if item.has_previous%}
+<a href="">Previous Page
+{% endif %}
+<br>
+{% if item.has_next %}
+<a href=''>Next Page
+{% endif %}
+</table>
+{% endfor %}
+{% endblock %}

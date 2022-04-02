@@ -1,0 +1,49 @@
+<DOCTYPE html>
+<head>
+<tittle> Checkout Page !</tittle>
+</head>
+Hi , {{user.first_name}}
+<body>
+<h6>{% if p_id %}
+{{p_id}}--Product unique ID 
+<br>
+{{p_q}}----Product Quantity 
+<br>
+<br>
+{{p}}----Product Price 
+<br>
+<img src="{{p_img.url}}" height='100' width='200'></img>
+<br>
+<br>
+<a href="{% url 'add_address' %}" >Add A Address Here !</a>
+<br>
+{% comment %} <a href="{% url 'PRODUCTR:checkout' %}">Checkout</a> {% endcomment %}
+<form action="{% url 'PRODUCTR:buy_now_checkout' %}" method='POST'>{% csrf_token %}
+ {% for i in add %}
+<br>
+<input type='radio' required name='check_add_id' id="check{{forloop.counter}}"  value="{{i.pk}}" ><b>Address {{forloop.counter}}</b>
+<br>
+{{i.id }}---id 
+<br>
+<br>
+{{i.f_add}}--Full Address
+<br>
+{{ph_no}} ----Phone No 
+<br>
+{{i.alt_ph_no}}----Alternative Phone Number
+<br>
+<br>
+{{i.landmark}}--Landmark
+<br>
+<br>
+{% endfor %}
+<input type='Number' name='desired_quality' value="{{p_q}}">-Product Quantity
+ {% comment %} For JavaScript and handeling all cart related handeling ! {% endcomment %}
+<button><input type='submit'></button>
+</form>
+{% endif %}
+
+</h6>
+
+</body>
+</html>

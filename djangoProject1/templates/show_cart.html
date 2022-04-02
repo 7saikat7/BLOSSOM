@@ -1,0 +1,721 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+  <title>Home </title>
+
+  <link rel="icon" href="{% static 'image/logo-midi.png' %}"/>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+
+
+
+
+
+
+
+
+  <style type="text/css">
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* ============ only desktop view ============ */
+    /* best-plant  */
+    .best-plant {
+      padding: 65px 0;
+
+    }
+
+    .im {
+      height: 400px;
+    }
+
+    .best-plant .card {
+      border: none !important;
+      border-radius: 15px;
+      box-shadow: 0px 5px 35px #acf5cd;
+    }
+
+    .card-footer {
+      border: none;
+      background-color: transparent;
+    }
+
+    /* best-plant end  */
+
+    /* top-product  */
+    .top-product {
+      padding: 50px 0;
+    }
+
+    .top-product .card {
+      margin: 15px;
+      border: none !important;
+    }
+
+    .owl-im {
+      height: 200px;
+
+    }
+
+    /* top-product end  */
+
+
+
+
+
+
+
+
+    .banar {
+      width: 100%;
+      min-height: 50vh;
+      padding: 50px 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/kara-eads-zcVArTF8Frs-unsplash.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    /* ======================================= */
+/* cart page  */
+.cart-out{
+  padding-top: 55px;
+}
+.cart-out .cart-page {
+  margin: 90px auto;
+}
+
+.cart-out table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-out .cart-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cart-out th {
+  text-align: left;
+  padding: 10px;
+  color: #ffffff;
+  background: #56ab2f;
+  font-weight: normal;
+}
+.cart-out td {
+  padding: 10px 5px;
+}
+
+.cart-out td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+.cart-out td a {
+  color: #56ab2f;
+  font-size: 12px;
+}
+
+.cart-out td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.cart-out .total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-out .total-price table {
+  border-top: 3px solid #56ab2f;
+  width: 100%;
+  max-width: 400px;
+}
+
+.cart-out td:last-child {
+  text-align: right;
+}
+
+.cart-out th:last-child {
+  text-align: right;
+}
+
+
+.boxx{
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid rgb(5, 138, 49);
+}
+.checkout {
+      padding: 25px 0;
+
+    }
+
+    .checkout .card {
+      padding: 15px 20px;
+      border: none !important;
+
+    }
+
+    .checkout .form-control {
+      border: 1px solid rgb(61, 148, 10) !important;
+
+    }
+
+    .checkout .form-control:focus {
+
+      box-shadow: none;
+
+    }
+
+    /* ============================== */
+    @media (max-width:992px) {
+      .vb{
+        display: none;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body class="bg-light">
+
+  <div class="topbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12 mx-auto">
+          <a href="tel:+971 44 302 476" class="up"><i class="fa fa-phone pr-2 " aria-hidden="true"></i>+971 44 302
+            476</a><br>
+          <a href="mailto:info@creabuild.com" class=" up"><i class="fa fa-envelope pr-2"
+              aria-hidden="true"></i>info@creabuild.com</a>
+
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 mx-auto ser">
+          
+        </div>
+        <div class=" col-lg-4 col-md-4 col-12 mx-auto">
+          <div class="float-right">
+            <a href="cart.html">
+              <div class="sidebar" id="barr">
+                <p class="text-center">0</p>
+                <img src="{% static 'img/add-to-basket1.svg' %}" alt="">
+                
+              </div>
+     
+              
+            </a>
+
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-green ">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="{% static 'img/ugaoo_logo.svg' %}" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false"
+        aria-label="Toggle navigation">
+
+        <i class="fa fa-bars" id="bar"></i>
+        <i class="fa fa-times" id="cross"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav">
+
+
+
+        <ul class="navbar-nav ml-auto ">
+
+          </li>
+          <li class="nav-item dropdown p-2 ">
+            <a href="{% url 'PRODUCTR:dashboard' %}" class="nav-link"> User</a>
+          </li>
+
+
+
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <main>
+
+<section class="cart-out">
+{% load static %}
+<H>HERE will be all cart product of users !</H1>
+</html>
+<body>
+{% if check_cart|length < 1 %}
+<br>
+<br>
+<br>
+show that the cart length is 0 
+<br>
+----{{no_product}}---
+<h3>{{no_add}}</h3>
+<br>
+<br>
+<a href="{% url 'PRODUCTR:all_products' %}">Go To Shopping !
+
+{% else %}
+
+  <div class="container cart-page">
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+       {% for objects in check_cart %}
+      <tr class="boxx">
+        <td>
+          <div class="cart-info">
+           <a href=""> <img src="{{objects.product_p.image1.url}}" alt="" /></a>
+            <div>
+              <p>{{objects.product_p.name}}</p>
+              <small>Price ₹<span id="price1">{{objects.product_p.off_price}}</span>.00</small>
+              <br />
+              <a class='del-cart btn' class='link' prodid="{{objects.product_p.custom_id}}" >Remove
+            </div>
+           {% comment %} onclick="dec('qty1','price1','total-price1')" {% endcomment %}
+          </div>
+        </td>
+        <td class="pl-2 row">
+        <button><a type="button"  class="minus-cart  btn-success border border-light p-2 "  prodid="{{objects.product_p.custom_id}}">-</a></button>
+          <br>
+          <input type="text"  size=4 class=" border border-light text-center" value={{objects.prod_quantity}} readonly>  
+          <br>
+          <button><a type="button"  class="plus-cart btn-success border border-light p-2" prodid="{{objects.product_p.custom_id}}">+</a></button>
+        <td>
+        <td class="pl-3 row">
+        <div class="cart-info">
+        <p>{{total_amount}}</p>
+        </div>
+        </td>
+
+        
+        
+      </tr>
+     {%endfor%}
+      
+     
+    </table>
+
+  </div>
+  <div class="container checkout">
+    <div class="row">
+      <div class="col-lg-6 col-md-4 col-12 mx-auto mb-3 vb">
+
+      </div>
+      <div class="col-lg-6 col-md-8 col-12 mx-auto mb-3">
+        <div class="card">
+          <div class="text-right">
+           <a href="{% url 'add_address' %}" class="btn btn-success">Add Address</a>
+
+          </div>
+          <br>
+          
+          <form action="{% url 'PRODUCTR:checkout' %}" method="POST">{% csrf_token %}
+            <p>Check One Address Where You Want to Collect Your Order: </p>
+            <br>
+            {% for i in add %} 
+            <!-- <div class="form-group">
+                    <label for="">Total Amount:</label>
+                    <input type="text" class="form-control" placeholder="" name="amount" disabled value="125.00">
+                  </div> -->
+            ADDRESS :[<b>{{forloop.counter}}</b>]
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="check_add_id"  value={{i.id}} required>Ordered By :{{user.first_name}} <br>
+                {{user.username}} <br> Ph :{{i.ph_no}}<br>Landmark:{{i.landmark}} <br>Full Address:{{i.full_address}}
+                
+
+              </label>
+            </div>
+             {%endfor%} 
+            <br>
+  
+            <div class="text-center">
+              <input type="submit" class="btn btn-outline-success">
+            </div>
+          </form>
+
+          <br>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{%endif%}
+
+
+
+  
+
+    <section class="banar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 col-md-8 col-12 mx-auto">
+            <br>
+            <h2 class="text-white text-center">Our Special Services</h2>
+            <br>
+            <div class="text-center">
+              <a href="" class="btn btn-dark ">Join Now</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+   
+    
+    
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 col-6 mx-auto mb-3">
+          <h2 class="com font-weight-bold">Navlinks</h2>
+
+          <ul class="p-2 fot-link">
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Home</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">About</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Plants</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Privacy Policy</a></li>
+
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">T&C</a></li>
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Faqs</a></li>
+
+          </ul>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-6 mx-auto mb-3">
+          <h2 class="com font-weight-bold">Plants</h2>
+
+          <ul class="p-2 fot-link">
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Home</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">About</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Plants</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Privacy Policy</a></li>
+
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">T&C</a></li>
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Faqs</a></li>
+
+          </ul>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-6 mx-auto mb-3">
+          <h2 class="com font-weight-bold">Flowering</h2>
+
+          <ul class="p-2 fot-link">
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Home</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">About</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Plants</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Privacy Policy</a></li>
+
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">T&C</a></li>
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Faqs</a></li>
+
+          </ul>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-6 mx-auto mb-3">
+          <h2 class="com font-weight-bold">Non-flowering</h2>
+
+          <ul class="p-2 fot-link">
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Home</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">About</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Plants</a></li>
+
+            <li> <i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Privacy Policy</a></li>
+
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">T&C</a></li>
+            <li><i class="fa fa-pagelines pr-2" aria-hidden="true"></i><a href="">Faqs</a></li>
+
+          </ul>
+
+        </div>
+      </div>
+      <div class="social ">
+        <ul>
+          <li> <a href=""><i class="fa fa-facebook-official fa-2x"></i></a></li>
+          <li> <a href=""><i class="fa fa-instagram fa-2x"></i></a></li>
+          <li> <a href=""><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+          <li> <a href=""><i class="fa fa-twitter-square fa-2x"></i></a></li>
+
+
+        </ul>
+        <p class="text-center">All rights reserved © 2021 | ugaoo.com</p>
+      </div>
+    </div>
+
+
+  </footer>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+
+
+
+  <script>
+
+
+    $(".top-product .owl-carousel").owlCarousel({
+
+      loop: true,
+      nav: false,
+      dots: false,
+      autoplay: true,
+
+      responsive: {
+        0: {
+          items: 2,
+
+        },
+        600: {
+          items: 3,
+
+        },
+        800: {
+          items: 5,
+        }
+
+
+      }
+    });
+  </script>
+
+
+
+
+
+  <script>
+    $(document).ready(function () {
+      $("#cross").css("display", "none");
+      $("#bar").click(function () {
+        $("#bar").css("display", "none");
+        $("#cross").css("display", "block");
+
+      });
+      $("#cross").click(function () {
+        $("#cross").css("display", "none");
+        $("#bar").css("display", "block");
+
+      });
+
+    });
+
+    $(window).on('scroll', () => {
+      if ($(document).scrollTop() > 70) {
+        $('nav').addClass('fixed-top animated fadeInDown ');
+      }
+      else {
+        $('nav').removeClass('fixed-top animated fadeInDown ');
+
+      }
+
+
+    });
+  </script>
+  <script>
+    
+
+function dec(val,price,tprice){
+    let iconv=document.getElementById(val);
+    var oneprice=document.getElementById(price);
+     var totprice=document.getElementById(tprice);
+    // console.log(iconv);
+    if(iconv.value<=1)
+    {
+        iconv.value=1;
+        alert("number never be less than 1");
+    }
+    else{
+
+        iconv.value=parseInt(iconv.value)-1;
+
+
+       
+        totprice.innerHTML=parseInt(oneprice.innerHTML)*parseInt(iconv.value);
+
+    }
+
+
+}
+function inc(val,price,tprice){
+     
+  let iconv=document.getElementById(val);
+    var oneprice=document.getElementById(price);
+    var totprice=document.getElementById(tprice);
+    if(iconv.value>=5)
+    {
+        iconv.value=5;
+        alert("number never be greate than 5");
+    }
+    else{
+
+        iconv.value=parseInt(iconv.value)+1;
+       
+        totprice.innerHTML=parseInt(oneprice.innerHTML)*parseInt(iconv.value);
+    }
+
+}
+  </script>
+
+
+ <script type='text/javascript'>   
+{% comment %} window.location.reload();  {% endcomment %}
+
+{% comment %} location = window.location {% endcomment %}
+console.log('working af !')
+window.history.forward(1);
+    {% comment %} $.ajax({
+            type:"GET",
+            url:"/prod/view_cart",
+            location.reload(true)
+    }) {% endcomment %}
+
+$('.plus-cart').click(function(){
+
+    var id =$(this).attr("prodid").toString();
+    var element= this.parentNode.children[1]
+
+    
+    
+    console.log('clicked....For Plus Cart............')
+    console.log(id)
+    console.log(element)
+
+
+    $.ajax({
+
+        type:"GET",
+        url:"/prod/plus_cart",
+        data:{
+            prod_id : id
+        },
+        success: function(plus_cart_res) {
+           
+            console.log(plus_cart_res)
+            console.log("succes")
+            location.reload()
+
+        }
+    })
+})
+
+$('.minus-cart').click(function(){
+
+    var id =$(this).attr("prodid").toString();
+    
+    console.log('clicked....For Minus Cart............')
+    console.log(id)
+
+    $.ajax({
+
+        type:"GET",
+        url:"/prod/minus_cart",
+        data:{
+            prod_id : id
+        },
+        success: function(minus_cart_res) {
+           
+            console.log(minus_cart_res)
+            console.log("succes")
+            location.reload()
+
+        }
+    })
+})
+
+
+$('.del-cart').click(function(){
+
+    var id =$(this).attr("prodid").toString();
+    
+    console.log('clicked....For Minus Cart............')
+    console.log(id)
+
+    $.ajax({
+
+        type:"GET",
+        url:"/prod/delete_cart",
+        data:{
+            prod_id : id
+        },
+        success: function(delete_cart_res) {
+           
+            console.log(delete_cart_res)
+            console.log("succes")
+            location.reload()
+
+        }
+    })
+})
+
+
+</script> 
+</body>
+
+</html>

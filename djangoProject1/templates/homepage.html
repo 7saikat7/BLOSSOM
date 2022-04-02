@@ -1,0 +1,220 @@
+{% extends  'index.html' %}
+{% load static %}
+
+{% block content %}
+
+<main>
+    <section class="hero">
+
+      <div class="swiper-container slideshow">
+
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide slide">
+            <div class="slide-image"
+              style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(static/img/toda5.jpeg); background-size: cover; background-position: center;">
+            </div>
+            <span class="slide-title">Indoor Plants</span>
+          </div>
+  
+          <div class="swiper-slide slide">
+            <div class="slide-image"
+              style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(static/img/toda4.jpeg); background-size: cover; background-position: center;">
+            </div>
+            <span class="slide-title">Outdoor Plants</span>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="slide-image"
+              style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(static/img/toda2.jpeg); background-size: cover; background-position: center;">
+            </div>
+            <span class="slide-title">Flower Plants</span>
+          </div>
+          <div class="swiper-slide slide">
+            <div class="slide-image"
+              style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(static/img/toda.jpeg); background-size: cover; background-position: center;">
+            </div>
+            <span class="slide-title">Home Decoration</span>
+          </div>
+
+
+
+        </div>
+
+        <div class="slideshow-pagination"></div>
+
+        <div class="slideshow-navigation">
+          <div class="slideshow-navigation-button prev"><span class="fa fa-chevron-left"></span></div>
+          <div class="slideshow-navigation-button next"><span class="fa fa-chevron-right"></span></div>
+        </div>
+
+      </div>
+
+    </section>
+    {% comment %} {% for i in p %} {% endcomment %}
+    <section class="top-product1">
+      <div class="container">
+      
+        <div class="owl-carousel owl-theme">
+         
+          {% comment %} <a href={% url 'PRODUCTR:detailprod_page' pk=i.p.custom_id %}> {% endcomment %}
+            <div class="card">
+              <img src={{i.image1.url}} alt="Flower" class="img-fluid owl-imm">
+            </div>
+          </a>
+          </div>
+
+      </div>
+        </section>
+       {% comment %} {% endfor %} {% endcomment %}
+
+<section class="best-plant">
+      <div class="container">
+        <h1 class="text-center">Our Services</h1>
+        <br>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+              <img src="{% static 'img/toda5.jpeg'%}" alt="" class="img-fluid im">
+              <div class="p-3 ">
+                <h2 class="text-center">Indoor Plant</h2>
+              </div>
+              <div class="card-footer mx-auto">
+              <form action="{% url 'PRODUCTR:search' %}" method='POST'>{% csrf_token %}
+               {% comment %} <input type="text" name='search_query' class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2"> {% endcomment %}
+                {% comment %} <a  class="btn btn-outline-success ">View All <i class="fa fa-arrow-right"
+                    aria-hidden="true"> {% endcomment %}
+                <br>
+                <button type='submit' class="btn btn-outline-success " name='search_query' value='Indoor' class="input-group-text btn" placeholder=''>View All
+              </form>         
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+              <img src="{% static 'img/toda4.jpeg'%}" alt="" class="img-fluid im">
+              <div class="p-3 ">
+                <h2 class="text-center">Outdoor Plant</h2>
+              </div>
+              <div class="card-footer mx-auto">
+              <form action="{% url 'PRODUCTR:search' %}" method='POST'>{% csrf_token %}
+               {% comment %} <input type="text" name='search_query' class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2"> {% endcomment %}
+                {% comment %} <a  class="btn btn-outline-success ">View All <i class="fa fa-arrow-right"
+                    aria-hidden="true"> {% endcomment %}
+                <br>
+                <button type='submit' class="btn btn-outline-success " name='search_query' value='Outdoor' class="input-group-text btn" placeholder=''>View All
+              </form>         
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+              <img src="{% static 'img/toda2.jpeg'%}" alt="" class="img-fluid im">
+              <div class="p-3 ">
+                <h2 class="text-center">Home Decore </h2>
+              </div>
+              <div class="card-footer mx-auto">
+              <form action="{% url 'PRODUCTR:search' %}" method='POST'>{% csrf_token %}
+             
+                <br>
+                <button type='submit' class="btn btn-outline-success " name='search_query' value='Decore' class="input-group-text btn" placeholder=''>View All
+              </form>         
+              </div>
+            </div>
+          </div>
+         
+         
+        </div>
+        
+      </div>
+    </section>
+    <section class="banar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 col-md-8 col-12 mx-auto">
+            <br>
+            <h2 class="text-white text-center">Our Special Services</h2>
+            <br>
+            <div class="text-center">
+              <a href="" class="btn btn-dark ">Join Now</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="plant-about">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12 mb-3 ">
+            <figure>
+              <div class="card one d-flex align-items-center justify-content-center">
+
+              </div>
+            </figure>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 mb-3  ">
+            <div class="p-3 ">
+              <h1 class="te">Planters on fleek!</h1>
+              <p>The perfect companions for your green members and also decor pieces in their own right, our planters
+                truly amp up your space. There is a plant for every home and a planter for every plant. Browse our
+                extensive in-house collection to find your match.</p>
+              <a href="" class="btn btn-outline-success"> Know More <i class="fa fa-arrow-right"
+                  aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-12 mb-3 ">
+            <div class="p-3">
+              <h1 class="te">Gifts that Grow</h1>
+              <p>Be it festivals, birthdays or anniversaries, gifting plants signifies hope - for the future. What's
+                better than gifts that grow with you and remind you of happy times. You select, we deliver, and
+                happiness is guaranteed.</p>
+              <a href="" class="btn btn-outline-success"> Know More <i class="fa fa-arrow-right"
+                  aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 mb-3">
+            <figure>
+              <div class="card two d-flex align-items-center justify-content-center ">
+
+              </div>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <section class="top-product">
+      <div class="container">
+        <h1 class="text-center">Our Top Products</h1>
+        <br>
+        <div class="owl-carousel owl-theme">
+         {% for items in B %}
+          <a href="{% url 'PRODUCTR:detailprod_page' pk=items.best_selling_product.custom_id %}">
+            <div class="card">
+              <img src={{items.best_selling_product.image1.url}} alt="best selling plant" class="img-fluid owl-im">
+            </div>
+          </a>
+            {% endfor %}
+        </div>
+
+    </section>
+      </main> 
+      <br>
+      <br>
+      <br>
+
+         
+       {% endblock %}
+<br>
+{% comment %} </body>
+
+<br>
+
+</html> {% endcomment %}

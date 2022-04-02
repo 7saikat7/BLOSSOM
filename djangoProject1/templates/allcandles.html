@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Candles are our emotion</title>
+</head>
+<body>
+<b>Hello </b>
+<br>
+
+{% for items in C %}
+ <table>
+ <div class="form-row">
+     <br><br>
+     <br>
+    product_name :<b>{{ items.name_c }}</b>
+     <br>
+    Color:{{ items.color }}
+     <br>
+ <img src="{{ items.image_c1.url }}" height="200" width="200">
+
+     <br>
+     {{ items.description_c|truncatewords:100}}
+     <br>
+     <br>
+     actual_price:{{ items.max_price_c }}
+     <br>
+     offer_price :<b>{{ items.off_price_c }}</b>
+     <br>
+     type:<b>{{ items.type }}</b>
+     <br>
+
+     <button ><a href="{% url 'detailprod_c_page' pk_c=items.custom_id_c %}" type="button">View Details</a> </button>
+ <br>
+ </div>
+#################     *****     ##################
+</table>
+{% endfor %}
+</body>
+</html>

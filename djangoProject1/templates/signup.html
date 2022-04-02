@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Register Here </title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	
+	<img class="wave" src="{% static 'img/wave.png' %}">
+	<div class="container">
+		<div class="img">
+			<img src="{% static 'img/bg.svg' %}">
+		</div>
+		<div class="login-content">
+			<form action="" method='POST'>{% csrf_token %}
+				<img src="{% static 'img/girl.jpg' %}">
+				<h2 class="title">Welcome</h2>
+                <h4 class='subtittle'>{{error2}} </h4><br>
+                <h4 class='subtittle'>{{error3}} </h4><br>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fa fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5></h5>
+           		   		<input type="text" class="input" placeholder='Name' name="user_name" required>
+           		   </div>
+           		</div>
+           		<div class="input-div one">
+           		   <div class="i"> 
+           		    	<i class="fa fa-envelope"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5></h5>
+           		    	<input type="email" class="input" placeholder='Email' name="email_u" required>
+            	   </div>
+            	</div>
+                <div class="input-div one">
+                    <div class="i"> 
+                         <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="div">
+                         <h5></h5>
+                         <input type="tel" class="input"  placeholder='Mobile No' maxlength='10' name="ph_number" required>
+                 </div>
+              </div>
+                <div class="input-div pass">
+                    <div class="i"> 
+                         <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="div">
+                         <h5></h5>
+                         <input type="password" class="input" name="type_password" placeholder='Enter password' required>
+                     </div>
+
+                    <div class="i"> 
+                         <i class="fa fa-lock"></i>
+                    </div>
+                     <div class="div">
+                        <input type="password" class="input" name="type_password_again" placeholder='Re-Enter-Password ' required>
+                    </div>
+                 </div>
+                 
+              </div>
+                
+            	<a href="/">Back To Home ?</a>
+                
+            	<input type="submit" class="btn" placeholder='Register'>
+                <a href="{% url 'user_login' %}"style="text-align: center;">Already have an account</a>
+            </form>
+        </div>
+     
+    </div>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login To Bloossms</title>
+</head>
+<body>
+<h4>{{error2}} or <br> {{error3}}</h4>
+
+<p>Create a account here  !! </p>
+<br>
+<form action="" method="POST"> {% csrf_token %}
+    <div class="form-row">
+    <input name="email_u" type="email">your email
+        </div>
+        <br>
+      <div>
+    <input name="user_name" type="name">Username
+        </div><br>
+    <div>
+    <input name="type_password" type="password">Password
+        </div><br>
+    <div>
+    <input name="type_password_again" type="password">Password
+        </div><br>
+    <button type="submit">Proceed to login </button>
+<br>
+
+</form>
+
+</body>
+</html> {% endcomment %}
